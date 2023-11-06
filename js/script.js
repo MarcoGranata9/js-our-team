@@ -30,3 +30,22 @@ const myTeam = [
     img : "barbara-ramos-graphic-designer.jpg"
 }
 ]
+
+const col = document.querySelector(".col")
+console.log(col);
+let teamString = ""
+
+for (let i = 0; i < myTeam.length; i++) {
+    const objects = myTeam[i];
+
+    teamString += `
+    <div class="card">
+        <img src="img/${objects.img}" alt="">
+        <h3>${objects.name}</h3>
+        <p>${objects.job}</p>
+    </div>
+    `
+    console.log(teamString);
+}
+
+col.innerHTML = teamString
